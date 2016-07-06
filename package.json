@@ -12,5 +12,9 @@
   },
   "author": "Get Rec'd",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/werecd/getrecd-client#readme"
+  "homepage": "https://bitbucket.org/werecd/getrecd-client#readme",
+  "dependencies": {
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0"
+  }
 }
