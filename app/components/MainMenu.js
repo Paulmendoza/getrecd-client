@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
 
-const MainMenu = ({menuItems, active}) => {
+const MainMenu = ({menuItems}) => {
     return (
         <ul className="nav navbar-nav">
-            {menuItems.map((item, index) => <li key={index}><a href={`#${item}`}>{item}</a></li>)}
-        </ul>
-    )
+            {menuItems.items.map((item, index) => 
+            <li key={index}>
+                <Link to={`/${item}`} activeClassName="active">{item}</Link>
+            </li>)}
+        </ul>    
+    );
 }
-
+    
 MainMenu.propTypes = {
-    menuItems: React.PropTypes.array.isRequired,
-    active: React.PropTypes.string.isRequired
+    menuItems: React.PropTypes.object.isRequired,
 }
 
-export default MainMenu
+export default MainMenu;
