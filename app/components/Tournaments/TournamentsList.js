@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import { Link } from 'react-router'
+import store from '../../store/TournamentStore.js';
 
 class TournamentsList extends Component {
     constructor(props) {
@@ -15,6 +16,7 @@ class TournamentsList extends Component {
                         <Link display="block" to={`/Tournament`}>
                                 {tournament}
                         </Link>
+                        <button className="btn btn-default" onClick={() => this.props.deleteTournament(index)}>x</button>
                         </li>)}
                 </ul>
             </div>
@@ -23,8 +25,7 @@ class TournamentsList extends Component {
 }
 
 TournamentsList.propTypes = {
-    tournaments: PropTypes.array.isRequired,
-    selectTournament: PropTypes.func.isRequired,
+    tournaments: PropTypes.array.isRequired
 };
 
 export default TournamentsList;
