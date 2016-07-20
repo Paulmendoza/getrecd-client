@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import store from '../../store/TournamentStore.js';
 
 class AddTournament extends Component {
     handleSubmit(event) {

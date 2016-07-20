@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import MainMenu from './MainMenu'
 
 const Main = ({ children, history }) => {
