@@ -2,14 +2,12 @@ import React, {Component} from 'react';
 import AddTournament from './AddTournament'
 import TournamentsList from './TournamentsList'
 import Tournament from './Tournament'
+import store from '../../store/TournamentStore.js';
 
 class Tournaments extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            tournaments: [],
-            selectedTournament: {},
-        }
+        this.state = store.getState();
         this.addTournament = this.addTournament.bind(this);
         this.selectTournament = this.selectTournament.bind(this);
     }

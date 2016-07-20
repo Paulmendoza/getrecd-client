@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import store from '../../store/TournamentStore.js';
 
 class AddTournament extends Component {
     handleSubmit(event) {
@@ -6,6 +7,8 @@ class AddTournament extends Component {
         var newTournament = this.tournament.value;
         this.tournament.value = '';
         this.props.addTournament(newTournament);
+        store.dispatch({type : "ADD_TOURNAMENT", tournament: newTournament});
+        console.log(store.getState());
     }
 
     setRef(ref) {
