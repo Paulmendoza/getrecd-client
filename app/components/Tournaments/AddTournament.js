@@ -1,7 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 
 class AddTournament extends Component {
-    handleSubmit() {
+    handleSubmit(event) {
+        event.preventDefault();
         var newTournament = this.tournament.value;
         this.tournament.value = '';
         this.props.addTournament(newTournament);
@@ -13,12 +14,12 @@ class AddTournament extends Component {
 
     render() {
         return (
-            <div className="input-group">
+            <form className="input-group" onSubmit={(e) => this.handleSubmit(e)}>
                 <input type="text" className="form-control" placeholder="Create Tournament" ref={(ref) => this.setRef(ref)}/>
                 <span className='input-group-btn'>
-                <button className="btn btn-default" type="button" onClick={() => this.handleSubmit()}>Submit</button>
+                <button className="btn btn-default" type="submit">Submit</button>
                 </span>
-            </div>
+            </form>
         );
     }
 }
