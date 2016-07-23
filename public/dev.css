@@ -1,0 +1,21 @@
+.game{
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.win-text{
+    display: block;
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 25px;
+}
+
+.rounds.table {
+    text-align: center;
+}
+
+.rounds.table th{
+    text-align: center;
+}

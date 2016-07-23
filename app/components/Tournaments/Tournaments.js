@@ -20,7 +20,7 @@ class Tournaments extends Component {
     
     render() {
         return (
-            <div className="container">
+            <div>
                 <div className="col-lg-4">
                     <h3>Tournaments</h3>
                     <AddTournament addTournament={this.addTournament} />

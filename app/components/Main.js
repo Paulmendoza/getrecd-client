@@ -5,8 +5,10 @@ import MainMenu from './MainMenu'
 const Main = ({ children, history }) => {
   var menuItems = {
     items: [
-    'Tournaments',
-    'Contact'],
+      'Tournaments',
+      'Contact',
+      'Games'
+    ],
   };
   return (
   <div className="main-container">
@@ -16,7 +18,7 @@ const Main = ({ children, history }) => {
         <MainMenu menuItems={menuItems} history={history} />
       </div>
     </nav>
-    <div>
+    <div className="container">
       {children}
     </div>
   </div>
