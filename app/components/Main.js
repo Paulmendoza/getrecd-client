@@ -5,8 +5,8 @@ import MainMenu from './MainMenu'
 const Main = ({ children, history }) => {
   var menuItems = {
     items: [
-    'Tournaments',
-    'Contact'],
+    'Tournaments'
+    ],
   };
   return (
   <div className="main-container">

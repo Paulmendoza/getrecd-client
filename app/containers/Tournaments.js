@@ -5,7 +5,6 @@ import CreateTournament from './CreateTournament';
 import { getCurrentTournament } from '../reducers/GetRecd'
 
 const mapStateToProps = (state) => {
-    console.log(state, " in map state to props");
     return {
         tournaments: state.tournaments.tournaments
     }

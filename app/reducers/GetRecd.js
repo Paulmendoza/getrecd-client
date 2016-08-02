@@ -6,7 +6,6 @@ const reducer = (state = {tournaments:[]}, action) => {
       var tournament = { id: ++tournamentId, name: action.tournament.name };
       return Object.assign({}, state, {tournaments:state.tournaments.concat(tournament)});
     case 'DELETE_TOURNAMENT':
-      console.log(action);
       const tournaments = state.tournaments
                         .filter(function(obj) {
                           if('id' in obj && obj.id === action.id) { return false }
