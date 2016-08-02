@@ -1,12 +1,11 @@
-import React, {Component, PropTypes} from 'react';
-import store from '../../store/TournamentStore.js';
+import React, {Component} from 'react';
 
-class AddTournament extends Component {
+class CreateTournament extends Component {
     handleSubmit(event) {
         event.preventDefault();
-        var newTournament = this.tournament.value;
+        var newTournament = { name: this.tournament.value };
         this.tournament.value = '';
-        this.props.addTournament(newTournament);
+        this.props.onCreateTournament(newTournament);
     }
 
     setRef(ref) {
@@ -25,8 +24,4 @@ class AddTournament extends Component {
     }
 }
 
-AddTournament.propTypes = {
-    addTournament: PropTypes.func.isRequired,
-};
-
-export default AddTournament;
+export default CreateTournament;

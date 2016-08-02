@@ -1,10 +1,10 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
-import Main from '../components/Main'
-import Home from '../components/Home'
-import Tournaments from '../components/Tournaments/Tournaments'
-import Tournament from '../components/Tournaments/Tournament'
-import Contact from '../components/Contact'
+import Main from './components/Main'
+import Home from './components/Home'
+import Tournaments from './containers/Tournaments'
+import Tournament from './components/Tournament'
+import Contact from './components/Contact'
 
 module.exports = (
   <Route path="/" component={Main}>
