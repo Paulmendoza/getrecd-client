@@ -6,7 +6,8 @@ import { getCurrentTournament } from '../reducers/GetRecd'
 
 const mapStateToProps = (state) => {
     return {
-        tournaments: state.tournaments.tournaments
+        tournaments: state.tournaments.tournaments,
+        selectedTournament: state.tournaments.selected
     }
 }
 
@@ -17,6 +18,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         onDeleteTournament: (id) => {
             dispatch({type:"DELETE_TOURNAMENT", id})
+        },
+        onSelectTournament: (id) => {
+            dispatch({type:"SELECT_TOURNAMENT", id})
         }
     }
 }

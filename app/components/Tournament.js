@@ -1,15 +1,18 @@
 import React, {PropTypes} from 'react';
 
 const Tournament = ({tournament}) => {
+    console.log(tournament)
     return (
         <div>
-            {tournament && <li className="list-group-item">{tournament.value}</li>}
+        <p>{tournament && tournament.id}</p>
+        <p>{tournament && tournament.name}</p>
+        <p>{tournament && tournament.numOfTeams}</p>
         </div>
     );
 };
 
 Tournament.propTypes = {
-    tournament: PropTypes.object,
+    tournaments: PropTypes.object
 };
 
 export default Tournament;
